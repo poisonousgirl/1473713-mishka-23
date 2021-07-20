@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Anna Gravillon](https://up.htmlacademy.ru/adaptive/23/user/1473713).
-* Наставник: `Неизвестно`.
+* Наставник: `Алексей Елькин` https://htmlacademy.ru/profile/alex_elkin.
 
 ---
 
