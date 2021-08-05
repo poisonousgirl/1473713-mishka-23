@@ -1,0 +1,29 @@
+.contacts {
+  margin: 0 30px;
+}
+
+.contacts__title {
+  .title();
+}
+
+.contacts__item {
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @colorTextLighter;
+}
+
+.contacts__link {
+  color: @colorTextLighter;
+  border-bottom: 1px solid @colorAccent;
+  padding-bottom: 2px;
+}
+
+.contacts__link:hover {
+  color: @colorAccentDarkHover;
+  border-bottom: 1px solid @colorAccentDarkHover;
+}
+
+.contacts__link:active {
+  border-bottom: 1px solid fade(@colorAccentDarkHover, 10%);
+}
