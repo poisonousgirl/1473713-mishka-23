@@ -1,5 +1,87 @@
+.page-form__wrapper {
+  margin: 0 30px;
+}
+
+.page-form__tytle {
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+  background-color: @colorFooterBackground;
+  width: 320px;
+  height: 103px;
+  padding-top: 74px;
+}
+
+.page-form__description {
+  font-size: 13px;
+  line-height: 24px;
+  font-weight: 400;
+  color: @colorTextLighter;
+}
+
 .page-form__form-field-legend {
   line-height: 16px;
   text-transform: uppercase;
   color: @colorAccent;
+}
+
+.page-form__form-field {
+  border: none;
+  padding: 0;
+  margin-top: 35px;
+}
+
+label {
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.field-name input::placeholder,
+.page-form__input-phone::placeholder,
+.page-form__input-email::placeholder,
+.field-extra::placeholder {
+  font-size: 17px;
+  line-height: 18px;
+  opacity: 0.3;
+  font-weight: 400;
+}
+
+.field-name input,
+.page-form__input-phone,
+.page-form__input-email {
+  border: none;
+  box-shadow: inset 0 -2px 0 @colorText;
+  width: 260px;
+  height: 52px;
+}
+
+.field-radio {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.field-checkbox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.field-extra textarea {
+  width: 260px;
+  height: 142px;
+  border: 2px solid @colorText;
+  box-shadow: inset 0 -2px 0 @colorText;
+}
+
+.page-form__note {
+  font-size: 14px;
+  line-height: 16px;
+  color: @colorTextLighter;
+  font-weight: 400;
+  text-align: left;
+}
+
+.page-form__button {
+  margin-bottom: 55px;
+  margin-top: 30px;
 }
