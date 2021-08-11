@@ -16,7 +16,7 @@
   <body class="page__body">
     <header class="page-header">
       <a class="page-header__logo" href="index.html">
-        <img class="page-header__logo-image" src="img/mishka-logo-mobile.svg.svg" width="86" height="35" alt="Магазин Мишка">
+        <img class="page-header__logo-image" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин Мишка">
       </a>
       <nav class="main-nav">
         <button class="main-nav__toggle" type="button">
@@ -50,48 +50,48 @@
       <div class="page-form__wrapper">
         <p class="page-form__description">Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.</p>
         <form class="page-form__form" method="POST">
-          <fieldset class="page-form__form-field field-radio">
+          <fieldset class="page-form__form-field-radio">
             <legend class="page-form__form-field-legend">Тип</legend>
-            <label class="page-form__label radio-label" for="accessory">
+            <label class="page-form__label-radio" for="accessory">
               <input type="radio" name="type" value="accessory" id="accessory" checked>Аксессуар для интерьера
             </label>
-            <label class="page-form__label radio-label" for="toy">
+            <label class="page-form__label-radio" for="toy">
               <input type="radio" name="type" value="toy" id="toy">Детская игрушка
             </label>
           </fieldset>
-          <fieldset class="page-form__form-field field-checkbox">
+          <fieldset class="page-form__form-field-checkbox">
             <legend class="page-form__form-field-legend">Цвет</legend>
             <input class="visually-hidden" type="checkbox" name="white" id="white" checked>
-            <label class="page-form__label checkbox-label-" for="white" checked>Белый</label>
+            <label class="page-form__label-checkbox" for="white">Белый</label>
             <input class="visually-hidden" type="checkbox" name="gray" id="gray" checked>
-            <label class="page-form__label checkbox-label" for="gray" checked>Серый</label>
+            <label class="page-form__label-checkbox" for="gray">Серый</label>
             <input class="visually-hidden" type="checkbox" name="tiffany" id="tiffany">
-            <label class="page-form__label checkbox-label" for="tiffany">«Тиффани»</label>
+            <label class="page-form__label-checkbox" for="tiffany">«Тиффани»</label>
             <input class="visually-hidden" type="checkbox" name="black" id="black">
-            <label class="page-form__label checkbox-label" for="black">Черный</label>
+            <label class="page-form__label-checkbox" for="black">Черный</label>
             <input class="visually-hidden" type="checkbox" name="pink" id="pink">
-            <label class="page-form__label checkbox-label" for="pink">Розовый</label>
+            <label class="page-form__label-checkbox" for="pink">Розовый</label>
             <input class="visually-hidden" type="checkbox" name="orange" id="orange">
-            <label class="page-form__label checkbox-label" for="orange">Оранжевый</label>
+            <label class="page-form__label-checkbox" for="orange">Оранжевый</label>
           </fieldset>
-          <fieldset class="page-form__form-field field-name">
+          <fieldset class="page-form__form-field-name">
             <legend class="page-form__form-field-legend">ФИО</legend>
-            <label class="page-form__label name-label" for="name">Имя:</label>
+            <label class="page-form__label-name" for="name">Имя:</label>
             <input type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
-            <label class="page-form__label name-label" for="last-name">Фамилия:</label>
+            <label class="page-form__label-name" for="last-name">Фамилия:</label>
             <input type="text" name="last-name" id="last-name" placeholder="Укажите фамилию*" required>
-            <label class="page-form__label name-label" for="middle-name">Отчество:</label>
+            <label class="page-form__label-name" for="middle-name">Отчество:</label>
             <input type="text" name="middle-name" id="middle-name" placeholder="Отчество, если желаете">
           </fieldset>
-          <fieldset class="page-form__form-field field-phone">
+          <fieldset class="page-form__form-field-phone">
             <legend class="page-form__form-field-legend">Тел</legend>
             <input class="page-form__input-phone" type="tel" name="tel" id="tel" pattern="+[0-9] [0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required placeholder="+7 XXX XXX XX XX*">
           </fieldset>
-          <fieldset class="page-form__form-field field-email">
+          <fieldset class="page-form__form-field-email">
             <legend class="page-form__form-field-legend">E-Mail</legend>
             <input class="page-form__input-email" type="email" name="email" id="email" placeholder="Ваш Email*" required>
           </fieldset>
-          <fieldset class="page-form__form-field field-extra">
+          <fieldset class="page-form__form-field-extra">
             <legend class="page-form__form-field-legend">Доп</legend>
             <textarea name="extra" id="extra-field" rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
           </fieldset>

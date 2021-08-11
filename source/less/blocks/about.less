@@ -2,20 +2,12 @@
   margin: 0 30px;
 }
 
-.about__title {
-  .title();
-}
-
 .about__list-item {
   text-align: left;
 }
 
 .about__list-item::before {
   content: "";
-}
-
-.about__review-title {
-  .title();
 }
 
 .about__review-body {
@@ -42,7 +34,7 @@
   color: @colorTextLighter;
 }
 
-.about__button-left {
+.about__button {
   width: 129px;
   height: 52px;
   background-color: @colorBackground;
@@ -50,8 +42,7 @@
   border-right: 1px solid @colorBorder;
 }
 
-.about__button-right {
-  .about__button-left();
+.about__button--right {
   border-left: none;
   margin-left: -4px;
 }
