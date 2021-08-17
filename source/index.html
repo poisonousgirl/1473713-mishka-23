@@ -29,26 +29,26 @@
           </svg>
         </button>
         <ul class="main-nav__list">
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--catalog">
             <a class="main-nav__item-link main-nav__item-link--catalog" href="catalog.html">Каталог товаров</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--form">
             <a class="main-nav__item-link main-nav__item-link--form" href="form.html">Вязание на заказ</a>
           </li>
-          <li class="main-nav__item">
-            <a class="main-nav__item-link main-nav__item-link--search" href="blank.html">Поиск по сайту</a>
+          <li class="main-nav__item main-nav__item--search">
+            <a class="main-nav__item-link main-nav__item-link--search" href="blank.html"><span>Поиск по сайту</span></a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--cart">
             <a class="main-nav__item-link main-nav__item-link--cart" href="blank.html">Корзина: пока пуста</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--new">
             <a class="main-nav__item-link main-nav__item-link--new" href="blank.html">Новые поступления</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item main-nav__item--sale">
             <a class="main-nav__item-link main-nav__item-link--sale" href="blank.html">Распродажа</a>
           </li>
+          <li class="main-nav__item main-nav__item--info">Бесплатная доставка по России</li>
         </ul>
-        <p class="main-nav__item main-nav__item--info">Бесплатная доставка по России</p>
       </nav>
     </header>
     <main class="page-main">
@@ -193,14 +193,25 @@
       </section>
     </footer>
     <form class="page-modal">
-      <h2 class="page-modal__title">Добавить в корзину</h2>
-      <p class="page-modal__description">Выберите размер:</p>
-      <div class="page-modal__radio">
-        <input class="page-modal__radio-item" type="radio" id="s" name="size-s" value="S" checked>
-        <input class="page-modal__radio-item" type="radio" id="m" name="size-m" value="M">
-        <input class="page-modal__radio-item" type="radio" id="l" name="size-l" value="L">
+      <div class="page-modal__wrapper">
+        <h2 class="page-modal__title">Добавить в корзину</h2>
+        <p class="page-modal__description">Выберите размер:</p>
+        <ul class="page-modal__radio">
+          <li class="page-modal__radio-item">
+            <input class="visually-hidden" type="radio" id="s" name="size-s" value="S" checked>
+            <label for="s">S</label>
+          </li>
+          <li class="page-modal__radio-item">
+            <input class="visually-hidden" type="radio" id="m" name="size-m" value="M">
+            <label for="m">M</label>
+          </li>
+          <li class="page-modal__radio-item">
+            <input class="visually-hidden" type="radio" id="l" name="size-l" value="L">
+            <label for="l">L</label>
+          </li>
+        </ul>
+        <button class="page-modal__button" type="button">Добавить</button>
       </div>
-      <button class="page-modal__button" type="button">Добавить</button>
     </form>
     <script src="js/script.js"></script>
   </body>
