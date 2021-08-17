@@ -1,12 +1,16 @@
 .page-main__menu {
+
+  height: 489px;
   background-image: url("../img/hero-mobile@2x.jpg");
   background-repeat: no-repeat;
 }
 
-.page-main__menu h2 {
+.page-main__menu-title {
   font-size: 27px;
   line-height: 30px;
   text-align: center;
+  height: 283px;
+  margin: 0;
 }
 
 .page-main__menu-button {
@@ -19,6 +23,7 @@
   color: @colorBackground;
   font-size: 19px;
   line-height: 24px;
+  font-weight: 700;
   text-align: left;
   border: none;
 }
@@ -43,4 +48,27 @@
   height: 60px;
   background-image: url("../img/lego.svg");
   background-repeat: no-repeat;
+}
+
+.page-main__menu-button-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .page-main__menu {
+    margin: 0 50px;
+  }
+  .page-main__menu-button-wrapper {
+    flex-direction: row;
+  }
+  .page-main__menu-button {
+    width: 334px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main__menu-button {
+    width: 525px;
+  }
 }

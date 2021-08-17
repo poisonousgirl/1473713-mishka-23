@@ -1,5 +1,19 @@
 .featured {
+  display: grid;
+  grid-template-areas:
+    "head"
+    "description"
+    "list"
+    "image"
+    "price"
+    "button";
   margin: 0 30px;
+}
+
+.featured__head-wrapper {
+  grid-area: head;
+  display: flex;
+  flex-direction: column;
 }
 
 .featured__item {
@@ -10,16 +24,27 @@
 }
 
 .featured__description {
+  grid-area: description;
   font-size: 15px;
   line-height: 24px;
   font-weight: 400;
   text-align: left;
+  color: @colorTextLighter
+}
+
+.featured__list {
+  grid-area: list;
+  display: grid;
+  grid-template-columns: 97px 162px;
+  grid-template-rows: repeat(3, 32px);
+  color: @colorTextLighter;
 }
 
 .featured__list-term {
   font-size: 15px;
   font-weight: 400;
   color: @colorTextLighter;
+  box-shadow: inset 0px -1px 0 0 @colorBorder;
 }
 
 .featured__list-description {
@@ -28,12 +53,61 @@
 }
 
 .featured__image {
+  grid-area: image;
   width: 260px;
   height: 315px;
   background-color: @colorFooterBackground;
+  z-index: -1;
 }
 
 .featured__price {
+  grid-area: price;
   line-height: 24px;
   text-align: center;
+  margin: 25px auto;
+}
+
+.featured__button {
+  grid-area: button;
+  margin-bottom: 36px;
+}
+
+@media (min-width: @tablet-width) {
+  .featured {
+    margin: 0 50px;
+    grid-template-columns: 334px 334px;
+    grid-template-areas:
+      "head head"
+      "description image"
+      "list image"
+      "price image"
+      "button image";
+  }
+  .featured__head-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .featured__item {
+    width: 100px;
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .featured {
+    grid-template-columns: 100px 350px 525px;
+    grid-template-areas:
+    "head head image"
+    ". description image"
+    ". list image"
+    ". price image"
+    ". button image";
+  }
+
+  .featured__item {
+    order: -1;
+    align-self: center;
+    text-align: center;
+    min-width: 100px;
+  }
 }

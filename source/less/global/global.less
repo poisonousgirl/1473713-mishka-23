@@ -8,6 +8,8 @@
   font-weight: 700;
   color: @colorText;
   background-color: @colorBackground;
+  outline: 1px solid crimson;
+  outline-offset: -1px;
 }
 
 a {
@@ -31,5 +33,32 @@ img {
 }
 
 .separator {
-  margin-left: -30px;
+  display: block;
+  height: 6px;
+  width: 320px;
+  background-image: url("../img/zigzag-line-small.svg");
+}
+
+
+@media (min-width: @tablet-width) {
+  .page__body {
+    width: @tablet-width;
+  }
+  .separator {
+    height: 17px;
+    width: 772px;
+    background-image: url("../img/zigzag-line-medium.svg");
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page__body {
+    width: @desktop-width;
+  }
+  .separator {
+    width: 1050px;
+    height: 23px;
+    margin: 0 auto;
+    background-image: url(../img/zigzag-line-desktop.svg);
+  }
 }

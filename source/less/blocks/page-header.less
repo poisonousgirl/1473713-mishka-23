@@ -1,4 +1,24 @@
 .page-header {
-  display: flex;
+  position: relative;
+  display: grid;
+  grid-template-columns: 200px 60px;
   margin: 0 30px;
+  height: 79px;
+}
+
+.page-header__logo {
+  align-self: center;
+  padding-left: 86px;
+}
+
+
+.main-nav__item:nth-child(n+5) {
+  display: none;
+}
+
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    height: 178px;
+  }
 }

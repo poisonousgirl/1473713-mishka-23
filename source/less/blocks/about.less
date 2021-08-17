@@ -1,16 +1,27 @@
-.about {
+.about__title,
+.about__button-wrapper,
+.about__signature,
+.about__list,
+.about__review-title,
+.about__review-text,
+.about__button-write {
   margin: 0 30px;
 }
-
 .about__list-item {
   text-align: left;
+  height: 120px;
 }
 
 .about__list-item::before {
   content: "";
 }
 
+.about__review-title {
+  grid-area: title;
+}
+
 .about__review-body {
+  grid-area: text;
   margin: 0;
 }
 
@@ -22,16 +33,24 @@
   color: @colorTextLighter;
 }
 
-.about__review-name {
+.about-signature {
+  grid-area: signature;
+}
+
+.about__signature-name {
   line-height: 30px;
   text-align: left;
 }
 
-.about__review-link {
+.about__signature-link {
   line-height: 24px;
   text-align: left;
   font-weight: 400;
   color: @colorTextLighter;
+}
+
+.about__button-wrapper {
+  grid-area: arrows;
 }
 
 .about__button {
@@ -40,9 +59,61 @@
   background-color: @colorBackground;
   border: 1px solid @colorBorder;
   border-right: 1px solid @colorBorder;
+  margin-bottom: 38px;
+  margin-top: 30px;
 }
 
 .about__button--right {
   border-left: none;
   margin-left: -4px;
+}
+
+.about__button-write {
+  grid-area: button;
+  margin-bottom: 45px;
+}
+
+@media (min-width: @tablet-width) {
+  .about__list {
+    display: grid;
+    grid-template-columns: 335px 335px;
+  }
+  .about__review {
+    margin-bottom: 68px;
+    width: @tablet-width;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title button"
+      "text text"
+      "signature arrows";
+    background-image: url(../img/Content/lace-background.png);
+    background-repeat: no-repeat;
+  }
+  .about__button {
+    border: none;
+  }
+  .about__review-title,
+  .about__review-text,
+  .about__signature {
+    margin-left: 50px;
+  }
+  .about__button-write,
+  .about__button-wrapper {
+    margin-right: 50px;
+    margin-left: auto;
+  }
+
+}
+
+@media (min-width: @desktop-width) {
+  .about__list {
+    margin-left: 174px;
+  }
+  .about__title {
+    margin-left: 174px;
+  }
+  .about__review {
+    width: @desktop-width;
+  }
 }
