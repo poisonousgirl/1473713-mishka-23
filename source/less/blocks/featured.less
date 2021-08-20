@@ -1,4 +1,5 @@
 .featured {
+  position: relative;
   display: grid;
   grid-template-areas:
     "head"
@@ -7,7 +8,20 @@
     "image"
     "price"
     "button";
-  margin: 0 30px;
+  margin: 0 auto;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background-image: url("../img/zigzag.svg");
+      background-position: center bottom;
+      background-size: auto 100%;
+      background-repeat: repeat-x;
+    }
 }
 
 .featured__head-wrapper {
@@ -29,7 +43,7 @@
   line-height: 24px;
   font-weight: 400;
   text-align: left;
-  color: @colorTextLighter
+  color: @colorTextLighter;
 }
 
 .featured__list {
@@ -44,7 +58,7 @@
   font-size: 15px;
   font-weight: 400;
   color: @colorTextLighter;
-  box-shadow: inset 0px -1px 0 0 @colorBorder;
+  box-shadow: inset 0 -1px 0 0 @colorBorder;
 }
 
 .featured__list-description {
@@ -74,7 +88,6 @@
 
 @media (min-width: @tablet-width) {
   .featured {
-    margin: 0 50px;
     grid-template-columns: 334px 334px;
     grid-template-areas:
       "head head"
@@ -82,11 +95,16 @@
       "list image"
       "price image"
       "button image";
+    &::after {
+      height: 17px;
+    }
   }
+
   .featured__head-wrapper {
     flex-direction: row;
     justify-content: space-between;
   }
+
   .featured__item {
     width: 100px;
     margin: 0;
@@ -97,11 +115,14 @@
   .featured {
     grid-template-columns: 100px 350px 525px;
     grid-template-areas:
-    "head head image"
-    ". description image"
-    ". list image"
-    ". price image"
-    ". button image";
+      "head head image"
+      ". description image"
+      ". list image"
+      ". price image"
+      ". button image";
+    &::after {
+       height: 23px;
+    }
   }
 
   .featured__item {

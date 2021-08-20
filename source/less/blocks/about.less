@@ -1,12 +1,20 @@
-.about__title,
-.about__button-wrapper,
-.about__signature,
-.about__list,
-.about__review-title,
-.about__review-text,
-.about__button-write {
-  margin: 0 30px;
+.about {
+  position: relative;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background-image: url("../img/zigzag.svg");
+    background-position: center bottom;
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+  }
 }
+
 .about__list-item {
   text-align: left;
   height: 120px;
@@ -78,6 +86,7 @@
     display: grid;
     grid-template-columns: 335px 335px;
   }
+
   .about__review {
     margin-bottom: 68px;
     width: @tablet-width;
@@ -87,32 +96,36 @@
       "title button"
       "text text"
       "signature arrows";
-    background-image: url(../img/Content/lace-background.png);
+    background-image: url("../img/Content/lace-background.png");
     background-repeat: no-repeat;
   }
+
   .about__button {
     border: none;
   }
+
   .about__review-title,
   .about__review-text,
   .about__signature {
     margin-left: 50px;
   }
+
   .about__button-write,
   .about__button-wrapper {
     margin-right: 50px;
     margin-left: auto;
   }
-
 }
 
 @media (min-width: @desktop-width) {
   .about__list {
     margin-left: 174px;
   }
+
   .about__title {
     margin-left: 174px;
   }
+
   .about__review {
     width: @desktop-width;
   }

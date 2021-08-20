@@ -1,7 +1,10 @@
 .page-main__menu {
+  position: relative;
   height: 489px;
   background-image: url("../img/hero-mobile@2x.jpg");
   background-repeat: no-repeat;
+  background-color: @colorHeaderBackground;
+  background-position: center;
 }
 
 .page-main__menu-title {
@@ -19,6 +22,7 @@
   background-color: @colorAccent;
   width: 320px;
   height: 103px;
+  margin-left: -30px;
   color: @colorBackground;
   font-size: 19px;
   line-height: 24px;
@@ -56,17 +60,37 @@
 
 @media (min-width: @tablet-width) {
   .page-main__menu {
-    margin: 0 50px;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 24px;
+      background-image: url("../img/wave.svg");
+      background-position: center bottom;
+      background-size: auto 100%;
+      background-repeat: repeat-x;
+    }
   }
+
   .page-main__menu-button-wrapper {
     flex-direction: row;
   }
+
   .page-main__menu-button {
     width: 334px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .page-main__menu {
+    &::after {
+      height: 34px;
+    }
+  }
+
   .page-main__menu-button {
     width: 525px;
   }

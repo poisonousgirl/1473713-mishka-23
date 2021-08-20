@@ -1,15 +1,10 @@
 .page__body {
-  width: 320px;
-  margin: 0 auto;
-  padding: 0;
   font-family: "Open Sans", "Roboto", sans-serif;
   font-size: 17px;
   line-height: 20px;
   font-weight: 700;
   color: @colorText;
   background-color: @colorBackground;
-  outline: 1px solid crimson;
-  outline-offset: -1px;
 }
 
 a {
@@ -32,33 +27,24 @@ img {
   overflow: hidden;
 }
 
-.separator {
-  display: block;
-  height: 6px;
-  width: 320px;
-  background-image: url("../img/zigzag-line-small.svg");
+.container {
+  width: 260px;
+  margin: 0 auto;
+  outline: 1px solid #dc143c;
+  outline-offset: -1px;
 }
 
 
 @media (min-width: @tablet-width) {
-  .page__body {
-    width: @tablet-width;
-  }
-  .separator {
-    height: 17px;
-    width: 772px;
-    background-image: url("../img/zigzag-line-medium.svg");
+  .container {
+    width: 668px;
+    height: 758px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .page__body {
-    width: @desktop-width;
-  }
-  .separator {
+  .container {
     width: 1050px;
-    height: 23px;
-    margin: 0 auto;
-    background-image: url(../img/zigzag-line-desktop.svg);
+    height: 763px;
   }
 }

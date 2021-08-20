@@ -6,7 +6,7 @@
   left: 50%;
   transform: translateX(-50%);
   border: 1px solid @colorBorderModal;
-  box-shadow: 0px 5px 10px rgba(0, 1, 1, 0.25);
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
 }
 
 .page-modal__wrapper {
@@ -41,7 +41,7 @@
 }
 
 .page-modal__radio-item input:checked {
-  border: 2px solid @colorAccent; //*not working
+  border: 2px solid @colorAccent; /*not working*/
 }
 
 .page-modal__button {
@@ -58,13 +58,16 @@
   .page-modal {
     width: 566px;
   }
+
   .page-modal__wrapper {
     margin: 46px 108px;
   }
+
   .page-modal__button {
     width: 350px;
     margin-bottom: 46px;
   }
+
   .page-modal__radio-item {
     width: 100px;
   }
