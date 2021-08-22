@@ -2,15 +2,19 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  margin: 0 30px;
+  max-width: @desktop-width;
+  margin: 0 auto;
 }
 
 .contacts__title {
+  margin: 38px auto;
+  padding: 0 30px;
   grid-area: title;
 }
 
 .contacts__container {
   display: grid;
+  justify-content: space-around;
   grid-template-columns: 76px 183px;
   grid-area: info;
 }
@@ -38,9 +42,11 @@
   border-bottom: 1px solid fade(@colorAccentDarkHover, 10%);
 }
 
-.contacts__map-image {
+.contacts__map {
   grid-area: map;
+  max-width: @desktop-width;
   margin: 0 auto;
+  background-image: url("../img/map-tablet@1x1.png");
 }
 
 .contacts__button {
@@ -65,7 +71,7 @@
       "title map"
       "info map"
       "button map";
-    margin-left: 173px;
+    padding-left: 173px;
   }
 
   .contacts__container {

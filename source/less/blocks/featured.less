@@ -9,19 +9,20 @@
     "price"
     "button";
   margin: 0 auto;
-    &::after {
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 6px;
-      background-image: url("../img/zigzag.svg");
-      background-position: center bottom;
-      background-size: auto 100%;
-      background-repeat: repeat-x;
-    }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background-image: url("../img/zigzag.svg");
+    background-position: center bottom;
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+  }
 }
 
 .featured__head-wrapper {
@@ -68,8 +69,9 @@
 
 .featured__image {
   grid-area: image;
-  width: 260px;
-  height: 315px;
+  width: 100%;
+  min-height: 315px;
+  margin: 0 auto;
   background-color: @colorFooterBackground;
   z-index: -1;
 }
@@ -95,6 +97,8 @@
       "list image"
       "price image"
       "button image";
+    padding-bottom: 52px;
+
     &::after {
       height: 17px;
     }
@@ -109,6 +113,10 @@
     width: 100px;
     margin: 0;
   }
+
+  .featured__button {
+    width: 292px;
+  } //*перебит стандартной кнопкой*//
 }
 
 @media (min-width: @desktop-width) {
@@ -120,8 +128,9 @@
       ". list image"
       ". price image"
       ". button image";
+
     &::after {
-       height: 23px;
+      height: 23px;
     }
   }
 

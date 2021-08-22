@@ -1,5 +1,6 @@
 .about {
   position: relative;
+
   &::after {
     content: "";
     display: block;
@@ -58,7 +59,10 @@
 }
 
 .about__button-wrapper {
+  display: flex;
+  justify-content: space-around;
   grid-area: arrows;
+  margin: 0 auto;
 }
 
 .about__button {
@@ -72,7 +76,6 @@
 }
 
 .about__button--right {
-  border-left: none;
   margin-left: -4px;
 }
 
@@ -82,13 +85,25 @@
 }
 
 @media (min-width: @tablet-width) {
+  .about {
+    padding-bottom: 68px;
+
+    &::after {
+      height: 17px;
+    }
+  }
+
   .about__list {
     display: grid;
     grid-template-columns: 335px 335px;
   }
 
   .about__review {
-    margin-bottom: 68px;
+    background-image: url("../img/Content/lace-background.png");
+    background-repeat: no-repeat;
+  }
+
+  .about__review-container {
     width: @tablet-width;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -96,8 +111,6 @@
       "title button"
       "text text"
       "signature arrows";
-    background-image: url("../img/Content/lace-background.png");
-    background-repeat: no-repeat;
   }
 
   .about__button {
@@ -118,15 +131,21 @@
 }
 
 @media (min-width: @desktop-width) {
+  .about {
+    &::after {
+      height: 23px;
+    }
+  }
+
   .about__list {
     margin-left: 174px;
   }
 
-  .about__title {
-    margin-left: 174px;
+  .about__review {
+    padding: 0 50px;
   }
 
-  .about__review {
-    width: @desktop-width;
+  .about__title {
+    margin-left: 174px;
   }
 }
