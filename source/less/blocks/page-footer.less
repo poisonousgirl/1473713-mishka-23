@@ -4,12 +4,20 @@
   flex-direction: column;
   align-items: center;
   background-color: @colorFooterBackground;
+  min-height: 160px;
+}
+
+.page-footer__logo {
+  display: none;
 }
 
 .page-footer__social-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
+  height: 80px;
+  min-width: 142px;
 }
 
 .page-footer__develop-title {
@@ -23,6 +31,18 @@
   position: absolute;
   width: 27px;
   height: 34px;
+  margin-left: 27px;
   background-image: url("../img/htmlacademy-dld.svg");
   background-repeat: no-repeat;
+}
+
+@media (min-width: @tablet-width) {
+  .page-footer {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .page-footer__logo {
+    display: block;
+  }
 }

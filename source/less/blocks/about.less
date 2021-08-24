@@ -1,16 +1,36 @@
 .about {
-  margin: 0 30px;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background-image: url("../img/zigzag.svg");
+    background-position: center bottom;
+    background-size: auto 100%;
+    background-repeat: repeat-x;
+  }
 }
 
 .about__list-item {
   text-align: left;
+  height: 120px;
 }
 
 .about__list-item::before {
   content: "";
 }
 
+.about__review-title {
+  grid-area: title;
+}
+
 .about__review-body {
+  grid-area: text;
   margin: 0;
 }
 
@@ -22,16 +42,27 @@
   color: @colorTextLighter;
 }
 
-.about__review-name {
+.about-signature {
+  grid-area: signature;
+}
+
+.about__signature-name {
   line-height: 30px;
   text-align: left;
 }
 
-.about__review-link {
+.about__signature-link {
   line-height: 24px;
   text-align: left;
   font-weight: 400;
   color: @colorTextLighter;
+}
+
+.about__button-wrapper {
+  display: flex;
+  justify-content: space-around;
+  grid-area: arrows;
+  margin: 0 auto;
 }
 
 .about__button {
@@ -40,9 +71,81 @@
   background-color: @colorBackground;
   border: 1px solid @colorBorder;
   border-right: 1px solid @colorBorder;
+  margin-bottom: 38px;
+  margin-top: 30px;
 }
 
 .about__button--right {
-  border-left: none;
   margin-left: -4px;
+}
+
+.about__button-write {
+  grid-area: button;
+  margin-bottom: 45px;
+}
+
+@media (min-width: @tablet-width) {
+  .about {
+    padding-bottom: 68px;
+
+    &::after {
+      height: 17px;
+    }
+  }
+
+  .about__list {
+    display: grid;
+    grid-template-columns: 335px 335px;
+  }
+
+  .about__review {
+    background-image: url("../img/Content/lace-background.png");
+    background-repeat: no-repeat;
+  }
+
+  .about__review-container {
+    width: @tablet-width;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "title button"
+      "text text"
+      "signature arrows";
+  }
+
+  .about__button {
+    border: none;
+  }
+
+  .about__review-title,
+  .about__review-text,
+  .about__signature {
+    margin-left: 50px;
+  }
+
+  .about__button-write,
+  .about__button-wrapper {
+    margin-right: 50px;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about {
+    &::after {
+      height: 23px;
+    }
+  }
+
+  .about__list {
+    margin-left: 174px;
+  }
+
+  .about__review {
+    padding: 0 50px;
+  }
+
+  .about__title {
+    margin-left: 174px;
+  }
 }
