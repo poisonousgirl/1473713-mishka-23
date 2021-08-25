@@ -30,7 +30,7 @@
 }
 
 .main-nav__item {
-  height: 79px;
+  min-height: 79px;
   font-size: 15px;
   line-height: 79px;
   text-align: left;
@@ -43,7 +43,7 @@
   position: absolute;
   margin-left: -46px;
   margin-top: 31px;
-  background-image: url("../../img/search.svg");
+  background-image: url("../img/search.svg");
   height: 18px;
   width: 18px;
   background-repeat: no-repeat;
@@ -157,7 +157,16 @@
 
   .main-nav__list {
     grid-template-areas:
-      "catalog form . search cart"
+      "catalog form logo search cart"
       "new sale . . info";
+
+    &::before {
+      content: "";
+      display: block;
+      width: 149px;
+      height: 72px;
+      grid-area: logo;
+      pointer-events: none;
+    }
   }
 }

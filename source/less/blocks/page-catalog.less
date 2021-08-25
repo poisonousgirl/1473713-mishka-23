@@ -1,16 +1,29 @@
+.page-catalog__product-image {
+  min-width: 260px;
+  width: 100%;
+}
+
 .page-catalog-title {
   font-size: 27px;
   line-height: 30px;
   background-color: @colorFooterBackground;
-  width: 320px;
+  min-width: 320px;
   padding-top: 74px;
+  margin: 0;
   height: 103px;
   text-align: center;
 }
 
-.page-catalog__product,
-.page-catalog__videobox {
+.page-catalog__product {
   margin: 0 30px;
+  margin-top: 30px;
+  border: 1px solid @colorBorder;
+}
+
+.page-catalog__videobox {
+  .page-catalog__product;
+  padding-bottom: 33px;
+  margin-bottom: 58px;
 }
 
 .page-catalog__videobox-title,
@@ -28,9 +41,47 @@
 }
 
 .page-catalog__product-price {
+  position: relative;
   font-size: 15px;
   line-height: 24px;
+  margin: 0;
+  padding-top: 22px;
+  padding-bottom: 26px;
   text-align: left;
+  border-top: 1px solid @colorBorder;
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    display: block;
+    width: 75px;
+    height: 73px;
+    background-image: url("../img/cart.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.page-catalog__videobox-title {
+  position: relative;
+  line-height: 20px;
+  padding-top: 21px;
+  padding-bottom: 26px;
+  padding-left: 91px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 34px;
+    height: 22px;
+    width: 32px;
+    background-image: url("../img/camera.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .page-catalog__videobox-description {
@@ -39,5 +90,38 @@
   font-weight: 400;
   color: @colorTextLighter;
   text-align: left;
-  margin-left: 34px;
+}
+
+.page-catalog__videobox-button {
+  width: 192px;
+}
+
+@media (min-width: @tablet-width) {
+  .page-catalog-title {
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 24px;
+      background-image: url("../img/wave.svg");
+      background-position: center bottom;
+      background-size: auto 100%;
+      background-repeat: repeat-x;
+    }
+  }
+  .page-catalog__product-link {
+    display: flex;
+  }
+
+  .page-catalog__product-image {
+    flex-grow: 1;
+  }
+
+  .page-catalog__product-container {
+    flex-grow: 1;
+  }
 }

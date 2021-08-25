@@ -1,6 +1,6 @@
 let button = document.querySelector('.main-nav__toggle');
-let form = document.querySelector('.main-nav__list');
-form.classList.add('main-nav__list--hidden');
+let modal = document.querySelector('.main-nav__list');
+modal.classList.add('main-nav__list--hidden');
 button.onclick = function() {
-    form.classList.toggle('main-nav__list--hidden');
+    modal.classList.toggle('main-nav__list--hidden');
 }
