@@ -27,7 +27,9 @@
     content: "";
     position: absolute;
     display: block;
-    max-width: 200px;
+    right: 0;
+    left: 62px;
+    top: 8px;
     min-width: 182px;
     height: 1px;
     margin-right: 0;
@@ -46,6 +48,7 @@
 }
 
 .page-form__label-radio {
+  display: block;
   padding-left: 61px;
 
   &::before {
@@ -73,6 +76,7 @@
 
 .page-form__checkbox-grid-container {
   display: grid;
+  padding: 0 30px;
 }
 
 .page-form__form-checkbox-wrapper {
@@ -129,6 +133,7 @@
 [class^="page-form__form-field"] {
   border: none;
   margin-top: 35px;
+  margin-bottom: 0;
 }
 
 .page-form label {
@@ -249,10 +254,8 @@
   }
 
   .page-form__checkbox-grid-container {
-    grid-template-columns: 169px auto auto;
-    grid-template-rows: repeat(3, 1fr);
-    padding-top: 50px;
-    padding-bottom: 50px;
+    grid-template-columns: 169px 1fr;
+    padding: 50px 50px;
   }
 
   .page-form__label-checkbox {
@@ -262,12 +265,12 @@
     }
   }
 
-  .page-form__form-field-legend-checkbox {
-    grid-column: ~"1 / -3";
+  .page-form__form-field-checkbox-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   .page-form__form-checkbox-wrapper {
-    grid-column: ~"2 / -1";
     margin: 12px 50px;
     display: flex;
     flex-direction: column;
@@ -350,6 +353,14 @@
     &::after {
       height: 34px;
     }
+  }
+
+  .page-form__checkbox-grid-container {
+    grid-template-columns: 128px 1fr;
+  }
+
+  .page-form__form-field-checkbox-list {
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .page-form__label-name + input {
