@@ -9,6 +9,7 @@
     "price"
     "button";
   margin: 0 auto;
+  padding-top: 10px;
 
   &::after {
     content: "";
@@ -31,11 +32,16 @@
   flex-direction: column;
 }
 
+.featured__title {
+  margin-bottom: 0;
+}
+
 .featured__item {
   color: @colorAccent;
   text-transform: uppercase;
   line-height: 20px;
   text-align: left;
+  margin-top: 4px;
 }
 
 .featured__description {
@@ -45,6 +51,7 @@
   font-weight: 400;
   text-align: left;
   color: @colorTextLighter;
+  margin-top: 0;
 }
 
 .featured__list {
@@ -71,7 +78,9 @@
   grid-area: image;
   width: 100%;
   min-height: 315px;
+  min-width: 260px;
   margin: 0 auto;
+  padding-top: 24px;
   background-color: @colorFooterBackground;
   z-index: -1;
 }

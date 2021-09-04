@@ -1,6 +1,11 @@
 .main-nav {
+  position: relative;
   align-self: center;
   text-align: right;
+}
+
+.page-header--nojs .main-nav {
+  margin-left: -30px;
 }
 
 .main-nav__list {
@@ -12,6 +17,12 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 9;
+}
+
+.page-header--nojs .main-nav__list {
+  position: static;
+  transform: none;
+  margin: 1px auto;
 }
 
 .main-nav__item-link {
@@ -32,39 +43,99 @@
 }
 
 .main-nav__toggle {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: -10px;
+  width: 20px;
+  height: 14px;
+  padding: 0;
   background-color: transparent;
   border: none;
+  cursor: pointer;
+}
+
+.main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background-color: @colorSocialBtn;
+  box-shadow:
+    0 5px 0 0 @colorSocialBtn,
+    0 10px 0 0 @colorSocialBtn;
+}
+
+.page-header--nojs .main-nav__toggle {
+  display: none;
+}
+
+.main-nav__toggle--opened {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 36px;
+    right: 30px;
+    width: 29px;
+    height: 2px;
+    background-color: @colorSocialBtn;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
 
 .main-nav__item {
+  position: relative;
   min-height: 79px;
   font-size: 15px;
   line-height: 79px;
   text-align: left;
-  padding-left: 46px;
+  padding-left: 76px;
   box-shadow: 0 1px 0 @colorBorder, inset 0 1px 0 @colorBorder;
 }
 
-.main-nav__item-link--search::before {
-  content: "";
+.main-nav__item-link--search-icon {
   position: absolute;
-  margin-left: -46px;
-  margin-top: 31px;
-  background-image: url("../img/search.svg");
+  top: 32px;
+  left: 32px;
   height: 18px;
   width: 18px;
-  background-repeat: no-repeat;
+  fill: fade(@colorBackground, 20%);
+
+  &:hover {
+    fill: @colorAccent;
+  }
+
+  &:active {
+    fill: fade(@colorAccent, 80%);
+  }
 }
 
-.main-nav__item-link--cart::before {
-  content: "";
+.main-nav__item-link--cart-icon {
   position: absolute;
-  margin-left: -46px;
-  margin-top: 31px;
-  background-image: url("../../img/cart.svg");
+  top: 32px;
+  left: 32px;
   height: 18px;
   width: 21px;
-  background-repeat: no-repeat;
+  fill: fade(@colorBackground, 20%);
+}
+
+.main-nav__item-link--cart-icon:hover {
+  fill: @colorAccent;
+}
+
+.main-nav__item-link--cart-icon:active {
+  fill: fade(@colorAccent, 80%);
 }
 
 .main-nav__item--new,
@@ -76,7 +147,6 @@
 @media (min-width: @tablet-width) {
   .main-nav {
     grid-area: header;
-    // display: grid;
   }
 
   .main-nav__item {
