@@ -16,6 +16,10 @@
   }
 }
 
+.about__title {
+  margin-top: 37px;
+}
+
 .about__list-item {
   text-align: left;
   height: 120px;
@@ -27,6 +31,8 @@
 
 .about__review-title {
   grid-area: title;
+  margin-top: 54px;
+  margin-bottom: 0;
 }
 
 .about__review-body {
@@ -39,6 +45,7 @@
   font-weight: 400;
   line-height: 30px;
   text-align: left;
+  margin-top: 15px;
   color: @colorTextLighter;
 }
 
@@ -49,6 +56,8 @@
 .about__signature-name {
   line-height: 30px;
   text-align: left;
+  margin-top: 30px;
+  margin-bottom: 0;
 }
 
 .about__signature-link {
@@ -73,6 +82,15 @@
   border-right: 1px solid @colorBorder;
   margin-bottom: 38px;
   margin-top: 30px;
+}
+
+.about__button:hover svg {
+  opacity: 0.6;
+}
+
+.about__button:active svg,
+.about__button:focus svg {
+  opacity: 0.3;
 }
 
 .about__button--right {
@@ -149,5 +167,9 @@
 
   .about__title {
     margin-left: 174px;
+  }
+
+  .about__button-write {
+    width: 175px;
   }
 }

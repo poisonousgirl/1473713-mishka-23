@@ -7,15 +7,17 @@
 }
 
 .contacts__title {
-  margin: 38px auto;
+  margin-top: 49px;
   padding: 0 30px;
   grid-area: title;
 }
 
 .contacts__container {
   display: grid;
-  justify-content: space-around;
+  justify-content: space-between;
   grid-template-columns: 76px 183px;
+  grid-template-rows: 60px 90px;
+  margin: 0 30px;
   grid-area: info;
 }
 
@@ -38,7 +40,8 @@
   border-bottom: 1px solid @colorAccentDarkHover;
 }
 
-.contacts__link:active {
+.contacts__link:active,
+.contacts__link:focus {
   border-bottom: 1px solid fade(@colorAccentDarkHover, 10%);
 }
 
@@ -47,6 +50,7 @@
   width: 100%;
   max-width: @desktop-width;
   margin: 0 auto;
+  margin-top: 68px;
   background-image: url("../img/map-tablet@1x1.png");
 }
 
@@ -61,6 +65,10 @@
     grid-template-columns: 1fr 3fr 1fr 3fr;
     font-size: 17px;
     line-height: 30px;
+  }
+
+  .contacts__button {
+    width: 230px;
   }
 }
 

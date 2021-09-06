@@ -9,6 +9,7 @@
     "price"
     "button";
   margin: 0 auto;
+  padding-top: 10px;
 
   &::after {
     content: "";
@@ -31,11 +32,16 @@
   flex-direction: column;
 }
 
+.featured__title {
+  margin-bottom: 0;
+}
+
 .featured__item {
   color: @colorAccent;
   text-transform: uppercase;
   line-height: 20px;
   text-align: left;
+  margin-top: 4px;
 }
 
 .featured__description {
@@ -45,6 +51,7 @@
   font-weight: 400;
   text-align: left;
   color: @colorTextLighter;
+  margin-top: 0;
 }
 
 .featured__list {
@@ -71,7 +78,9 @@
   grid-area: image;
   width: 100%;
   min-height: 315px;
+  min-width: 260px;
   margin: 0 auto;
+  padding-top: 24px;
   background-color: @colorFooterBackground;
   z-index: -1;
 }
@@ -91,6 +100,7 @@
 @media (min-width: @tablet-width) {
   .featured {
     grid-template-columns: 334px 334px;
+    grid-template-rows: 94px 133px 170px 57px 52px;
     grid-template-areas:
       "head head"
       "description image"
@@ -98,6 +108,7 @@
       "price image"
       "button image";
     padding-bottom: 52px;
+    padding-top: 0;
 
     &::after {
       height: 17px;
@@ -109,19 +120,31 @@
     justify-content: space-between;
   }
 
+  .featured__title {
+    margin: 0;
+  }
+
   .featured__item {
     width: 100px;
+    margin: 0;
+    text-align: center;
+  }
+
+  .featured__price {
     margin: 0;
   }
 
   .featured__button {
     width: 292px;
-  } //*перебит стандартной кнопкой*//
+    margin: 0;
+  }
 }
 
 @media (min-width: @desktop-width) {
   .featured {
-    grid-template-columns: 100px 350px 525px;
+    padding-top: 49px;
+    grid-template-columns: 172px 294px 583px;
+    grid-template-rows: 102px 125px 240px 57px 52px;
     grid-template-areas:
       "head head image"
       ". description image"
@@ -131,13 +154,26 @@
 
     &::after {
       height: 23px;
+      width: 1050px;
     }
+  }
+
+  .featured__head-wrapper {
+    width: 700px;
   }
 
   .featured__item {
     order: -1;
-    align-self: center;
     text-align: center;
     min-width: 100px;
+  }
+
+  .featured__image {
+    width: 525px;
+    height: 636px;
+  }
+
+  .featured__button {
+    justify-self: center;
   }
 }
