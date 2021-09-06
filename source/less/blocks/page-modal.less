@@ -33,15 +33,22 @@
   justify-content: space-between;
 }
 
-.page-modal__radio-item {
+.page-modal__radio-label {
+  display: block;
+  text-align: center;
+  line-height: 3;
   width: 70px;
   height: 52px;
-  line-height: 3;
   border: 2px solid fade(@colorTextLighter, 10%);
+  box-sizing: border-box;
 }
 
-.page-modal__radio-item input:checked {
-  border: 2px solid @colorAccent; /*not working*/
+.page-modal__radio-label:hover {
+  border: 2px solid @colorTextLighter;
+}
+
+input:checked + .page-modal__radio-label {
+  border: 2px solid @colorAccent;
 }
 
 .page-modal__button {
@@ -68,7 +75,7 @@
     margin-bottom: 46px;
   }
 
-  .page-modal__radio-item {
+  .page-modal__radio-label {
     width: 100px;
   }
 }

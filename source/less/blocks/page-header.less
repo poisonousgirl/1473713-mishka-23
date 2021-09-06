@@ -46,10 +46,25 @@
   padding-left: 40%;
 }
 
+.page-header__logo:hover .page-header__logo-image {
+  opacity: 0.6;
+}
+
+.page-header__logo:active .page-header__logo-image,
+.page-header__logo:focus .page-header__logo-image {
+  opacity: 0.3;
+}
+
 @media (min-width: @tablet-width) {
   .page-header__container {
     grid-template-columns: 100%;
     grid-template-areas: "header";
+  }
+
+  .page-header {
+    &::before {
+      height: 89px;
+    }
   }
 
   .page-header__logo {
