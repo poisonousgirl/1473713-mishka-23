@@ -69,7 +69,21 @@
     border: 2px solid @colorTextLighter;
     border-radius: 50%;
   }
+  transition: 0.3s all ease-in-out;
 }
+
+.page-form__form-input-radio:hover + label::before,
+.page-form__form-input-checkbox:hover + label::before {
+  border-color: @colorUnderline;
+}
+
+.page-form__form-input-radio:active + label::before,
+.page-form__form-input-radio:focus + label::before,
+.page-form__form-input-checkbox:active + label::before,
+.page-form__form-input-checkbox:focus + label::before {
+  border-color: rgba(@colorTextLighter, 0.3);
+}
+
 
 .page-form__form-input-radio:checked + label::after {
   content: "";
@@ -141,7 +155,7 @@
   margin-top: 38px;
 }
 
-.page-form__form-field-extra{
+.page-form__form-field-extra {
   margin-top: 36px;
 }
 
@@ -160,10 +174,20 @@
 .page-form__form-field-name input,
 .page-form__input-phone,
 .page-form__input-email {
+  font-size: 19px;
+  line-height: 18px;
+  letter-spacing: 1px;
   border: none;
-  box-shadow: inset 0 -2px 0 @colorText;
+  border-bottom: 2px solid @colorText;
   width: 260px;
   height: 52px;
+  box-sizing: border-box;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-bottom: 2px solid @colorUnderline;
+  }
 }
 
 .page-form__form-field-extra textarea {
@@ -171,6 +195,12 @@
   height: 134px;
   margin-top: 22px;
   border: 2px solid @colorText;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: @colorUnderline;
+  }
 }
 
 .page-form__form-field-legend + textarea::placeholder {
@@ -280,6 +310,7 @@
     padding-left: 80px;
     font-size: 19px;
     line-height: 18px;
+
     &::before {
       width: 48px;
       height: 48px;
@@ -306,6 +337,14 @@
     flex-direction: column;
   }
 
+  .page-form__form-field-name input,
+  .page-form__input-phone,
+  .page-form__input-email {
+    padding-left: 17px;
+    padding-bottom: 19px;
+  }
+
+
   .page-form__form-field-legend-name {
     grid-column: ~"1/-2";
   }
@@ -318,9 +357,9 @@
 
   .page-form__form-field-name {
     grid-template-columns: 169px auto;
-    grid-template-rows: 75px 76px 91px;
+    grid-template-rows: 77px 75px 84px;
     justify-content: space-between;
-    margin-top: 67px;
+    margin-top: 68px;
   }
 
   .page-form__label-name {
@@ -345,20 +384,20 @@
 
   .page-form__form-field-background-wrapper {
     background-color: @colorFooterBackground;
-    padding-top: 61px;
-    padding: 0;
+    padding-bottom: 52px;
   }
 
   .page-form__input-phone,
   .page-form__input-email {
     background-color: @colorFooterBackground;
     margin-left: 25px;
-    width: 501px;
+    width: 500px;
   }
 
   .page-form__input-phone {
     height: 35px;
   }
+
   .page-form__input-email {
     height: 45px;
   }
@@ -372,18 +411,18 @@
   }
 
   .page-form__form-field-phone {
-    padding-top: 61px;
+    padding-top: 67px;
   }
 
   .page-form__form-field-email {
-    padding-top: 27px;
+    padding-top: 32px;
     align-items: center;
   }
 
   .page-form__form-field-extra {
     display: flex;
     justify-content: space-between;
-    margin-top: 101px;
+    margin-top: 49px;
   }
 
   .page-form__form-field-extra h3 {
@@ -436,9 +475,6 @@
 
   .page-form__form-field-radio {
     padding: 0 111px;
-  }
-
-  .page-form__form-field-radio {
     grid-template-columns: 113px auto;
     margin-top: 78px;
     margin-bottom: 9px;
@@ -469,20 +505,54 @@
   }
 
   .page-form__label-name + input {
-    min-width: 573px;
+    width: 573px;
   }
 
-  .page-form__input-phone,
+  .page-form__form-field-phone,
+  .page-form__form-field-email {
+    padding: 0 111px;
+    margin: 0 auto;
+    justify-content: unset;
+  }
+
+  .page-form__form-field-phone {
+    padding-top: 67px;
+  }
+
+  .page-form__form-field-email {
+    padding-top: 28px;
+  }
+
+  .page-form__input-phone {
+    width: 697px;
+    margin-left: 82px;
+    padding-bottom: 22px;
+  }
+
   .page-form__input-email {
-    width: 700px;
+    width: 696px;
+    margin-left: 56px;
+    padding-bottom: 6px;
+  }
+
+  .page-form__form-field-extra {
+    padding: 0 111px;
+    justify-content: unset;
+    margin-top: 51px;
   }
 
   .page-form__form-field-extra textarea {
+    box-sizing: border-box;
     width: 700px;
+    height: 142px;
+    margin-left: 75px;
+    font-size: 19px;
+    line-height: 18px;
   }
 
   .page-form__send {
     margin-left: auto;
-    width: 700px;
+    width: 801px;
+    margin-top: 49px;
   }
 }

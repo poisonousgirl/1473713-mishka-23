@@ -25,10 +25,11 @@
 .page-catalog__product {
   margin-top: 30px;
   border: 1px solid @colorBorder;
-  transition: 0.3s all ease-in-out ;
+  transition: 0.3s all ease-in-out;
 
   &:hover {
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+
     .page-catalog__product-title {
       opacity: 0.6;
     }
@@ -45,10 +46,12 @@
 
   &:active,
   &:focus {
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+
     .page-catalog__product-title {
       opacity: 0.3;
     }
+
     .page-catalog__product-price svg {
       opacity: 0.3;
     }
@@ -134,11 +137,11 @@
   background-color: transparent;
 
   &:hover svg,
-  &:focus svg{
+  &:focus svg {
     transform: scale(1.2);
   }
 
-  &:active svg{
+  &:active svg {
     transform: scale(0.8);
     opacity: 0.3;
   }
@@ -185,6 +188,7 @@
       background-repeat: repeat-x;
     }
   }
+
   .page-catalog__product {
     margin-top: 0;
     margin-bottom: 54px;
@@ -321,6 +325,7 @@
     padding-left: 79px;
     padding-top: 99px;
     width: 200px;
+
     &::before {
       left: 79px;
       top: 47px;
@@ -348,11 +353,11 @@
     grid-template-areas:
       "video title"
       "video container";
-      grid-template-columns: 682px 367px;
-      grid-template-rows: 171px 284px;
-      margin-top: 0;
-      padding-bottom: 0;
-      margin-bottom: 102px;
+    grid-template-columns: 682px 367px;
+    grid-template-rows: 171px 284px;
+    margin-top: 0;
+    padding-bottom: 0;
+    margin-bottom: 102px;
   }
 
   .page-catalog__videobox-button {
