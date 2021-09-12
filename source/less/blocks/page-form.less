@@ -147,6 +147,12 @@
   min-height: 92px;
 }
 
+.page-form__label-name + input {
+  color: @colorTextLighter;
+  font-size: 19px;
+  line-height: 18px;
+}
+
 .page-form__form-field-phone {
   margin-top: 13px;
 }
@@ -191,9 +197,11 @@
 }
 
 .page-form__form-field-extra textarea {
-  width: 253px;
-  height: 134px;
+  box-sizing: border-box;
+  width: 260px;
+  height: 145px;
   margin-top: 22px;
+  padding: 19px 16px;
   border: 2px solid @colorText;
 
   &:hover,
@@ -201,10 +209,6 @@
   &:focus {
     border-color: @colorUnderline;
   }
-}
-
-.page-form__form-field-legend + textarea::placeholder {
-  padding: 17px;
 }
 
 .page-form__note {
@@ -347,6 +351,7 @@
 
   .page-form__form-field-legend-name {
     grid-column: ~"1/-2";
+    padding-top: 19px;
   }
 
   .page-form__form-name-wrapper {
@@ -359,19 +364,21 @@
     grid-template-columns: 169px auto;
     grid-template-rows: 77px 75px 84px;
     justify-content: space-between;
-    margin-top: 68px;
+    margin-top: 47px;
+    margin-bottom: 21px;
   }
 
   .page-form__label-name {
     font-size: 19px;
     line-height: 18px;
+    padding-top: 19px;
   }
 
   .page-form__label-name + input {
     width: 375px;
-    height: 33px;
     margin-left: 25px;
     flex-grow: 1;
+    padding: 19px 16px;
   }
 
   .page-form__input-name {
@@ -395,11 +402,11 @@
   }
 
   .page-form__input-phone {
-    height: 35px;
+    padding: 19px 16px;
   }
 
   .page-form__input-email {
-    height: 45px;
+    padding: 19px 16px;
   }
 
   .page-form__form-field-phone,
@@ -407,16 +414,16 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     margin: 0;
   }
 
   .page-form__form-field-phone {
-    padding-top: 67px;
+    padding-top: 49px;
   }
 
   .page-form__form-field-email {
-    padding-top: 32px;
-    align-items: center;
+    padding-top: 27px;
   }
 
   .page-form__form-field-extra {
@@ -430,8 +437,13 @@
   }
 
   .page-form__form-field-extra textarea {
-    width: 493px;
+    width: 501px;
     margin-top: 0;
+  }
+
+  .page-form__form-field-legend + textarea::placeholder {
+    font-size: 19px;
+    line-height: 18px;
   }
 
   .page-form__send {
@@ -501,7 +513,7 @@
   .page-form__form-field-name {
     padding: 0 111px;
     justify-content: unset;
-    grid-template-columns: 116px auto;
+    grid-template-columns: 116px 698px;
   }
 
   .page-form__label-name + input {
