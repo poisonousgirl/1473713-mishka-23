@@ -168,13 +168,13 @@
     width: 83px;
     height: 89px;
     padding: 0;
+    border-left: 1px solid rgba(@colorText, 0.1);
+    border-right: 1px solid rgba(@colorText, 0.1);
   }
 
-  .main-nav__item-link--search::before {
-    margin-left: 32px;
-    margin-top: 31px;
-    height: 83px;
-    width: 89px;
+  .main-nav__item--search .main-nav__item-icon {
+    top: 37px;
+    left: 26px;
   }
 
   .main-nav__item--cart {
@@ -238,6 +238,8 @@
     grid-template-areas:
       "catalog form logo search cart"
       "new sale . . info";
+    grid-template-columns: 184px 265px 250px 82px 266px;
+
 
     &::before {
       content: "";
@@ -247,5 +249,22 @@
       grid-area: logo;
       pointer-events: none;
     }
+  }
+
+  .main-nav__item--sale,
+  .main-nav__item--form {
+    padding-left: 35px;
+  }
+
+  .main-nav__item--catalog {
+    border-right: 1px solid rgba(@colorText, 0.1);
+    padding-top: 5px;
+    height: 84px;
+  }
+
+  .main-nav__item--catalog a,
+  .main-nav__item--form a,
+  .main-nav__item--cart a {
+    font-size: 17px;
   }
 }
