@@ -1,12 +1,18 @@
 .page-main__menu {
   position: relative;
-  background-image: url("../img/hero-mobile@2x.jpg");
+  background-image: url("../img/bg-main.mobile.jpg");
   background-repeat: no-repeat;
   background-color: @colorHeaderBackground;
-  background-position: top center;
+  background-position: center -17px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/bg-main.mobile@2x.jpg");
+    background-size: 320px auto;
+  }
 }
 
 .page-main__menu-title {
+  font-size: 27px;
   text-align: center;
   margin: 0;
   padding-top: 73px;
@@ -59,7 +65,7 @@
   display: block;
   width: 40px;
   height: 62px;
-  background-image: url("../img/lamp.svg");
+  background-image: url("../img/svg/lamp.svg");
   background-repeat: no-repeat;
 }
 
@@ -68,7 +74,7 @@
   display: block;
   width: 60px;
   height: 60px;
-  background-image: url("../img/lego.svg");
+  background-image: url("../img/svg/lego.svg");
   background-repeat: no-repeat;
 }
 
@@ -79,26 +85,33 @@
 
 @media (min-width: @tablet-width) {
   .page-main__menu {
-    height: 758px;
+    height: 730px;
     top: -68px;
-    background-image: url("../img/hero-desktop.jpg");
+    background-image: url("../img/bg-main.tablet.jpg");
+    background-position: center -1px;
 
     &::after {
       content: "";
       display: block;
       position: absolute;
-      bottom: 0;
+      bottom: -28px;
       left: 0;
       right: 0;
       height: 24px;
-      background-image: url("../img/wave.svg");
+      background-image: url("../img/svg/wave.svg");
       background-position: center bottom;
       background-size: auto 100%;
       background-repeat: repeat-x;
     }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-main.tablet@2x.jpg");
+      background-size: 768px auto;
+    }
   }
 
   .page-main__menu-title {
+    font-size: 43px;
     padding-top: 155px;
   }
 
@@ -109,21 +122,36 @@
     min-height: 119px;
     position: absolute;
     left: 50%;
-    bottom: 13px;
+    bottom: -15px;
     transform: translateX(-50%);
   }
 
   .page-main__menu-button {
     width: 334px;
     height: 119px;
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-main__menu {
+    background-image: url("../img/bg-main.desktop.jpg");
+    height: 700px;
+
     &::after {
       height: 34px;
+      bottom: -61px;
     }
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-main.desktop@2x.jpg");
+      background-size: 1150px auto;
+    }
+  }
+
+  .page-main__menu-title {
+    font-size: 53px;
   }
 
   .page-main__menu-button {
@@ -134,5 +162,6 @@
 
   .page-main__menu-button-wrapper {
     min-width: 1050px;
+    bottom: -45px;
   }
 }
