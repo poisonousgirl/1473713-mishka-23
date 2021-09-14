@@ -1,12 +1,21 @@
 .page-modal {
+  display: block;
   width: @mobile-width;
   height: 336px;
-  position: absolute;
+  position: fixed;
   margin: 0;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
   border: 1px solid @colorBorderModal;
+  background-color: @colorBackground;
   box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  transition: 0.3s all;
+  z-index: 30;
+
+  &--hide {
+    display: none;
+  }
 }
 
 .page-modal__wrapper {
@@ -60,6 +69,18 @@ input:checked + .page-modal__radio-label {
   background-color: @colorAccent;
   color: @colorBackground;
   margin-top: 31px;
+}
+
+.page-modal__overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(@colorBackground, 0.9);
+  z-index: 20;
+  transition: 0.3s all;
 }
 
 @media (min-width: @tablet-width) {

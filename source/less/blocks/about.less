@@ -169,11 +169,12 @@
 
   .about__review {
     background-image: url("../img/bg-about.tablet.jpg");
+    border-color: @colourBackgrouondImage;
     background-repeat: no-repeat;
     background-position: left 40px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("/source/img/bg-about.tablet@2x.jpg");
+      background-image: url("../img/bg-about.tablet@2x.jpg");
       background-size: 350px 457px;
     }
   }
@@ -245,10 +246,17 @@
 
   .about__list {
     margin-left: 174px;
+    width: 700px;
   }
 
   .about__review {
-    background-position-x: 50px;
+    background-image: url("../img/bg-about.desktop.jpg");
+    background-position: 50px 49px;
+    padding-bottom: 22px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-about.desktop@2x.jpg");
+    }
   }
 
   .about__title {
@@ -259,5 +267,28 @@
 
   .about__button-write {
     width: 175px;
+  }
+
+  .about__review-title {
+    margin-left: 174px;
+    padding-top: 77px;
+  }
+
+  .about__review-text {
+    padding-left: 174px;
+    padding-top: 36px;
+    padding-right: 65px;
+  }
+
+  .about__signature {
+    padding-top: 11px;
+    padding-left: 174px;
+    padding-bottom: 71px;
+    font-size: 17px;
+  }
+
+  .about__button {
+    width: 90px;
+    margin-top: 47px;
   }
 }

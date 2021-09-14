@@ -112,19 +112,48 @@
 @media (min-width: @desktop-width) {
   .contacts {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 400px 530px;
+    grid-template-rows: 150px 231px 77px;
     grid-template-areas:
       "title map"
       "info map"
       "button map";
     padding-left: 173px;
+    padding-right: 50px;
+    padding-top: 71px;
+    padding-bottom: 102px;
   }
 
   .contacts__container {
-    grid-template-columns: 82px 249px;
+    grid-template-columns: 79px 249px;
+    grid-template-rows: 60px 150px;
+  }
+
+  .contacts__title {
+    margin-top: 79px;
+
+    &::after {
+      top: -17px;
+      right: 413px;
+    }
+  }
+
+  .contacts__map {
+    margin-top: 0;
   }
 
   .contacts__button {
-    margin: initial;
+    margin: 0;
+    align-self: end;
+    margin-left: 52px;
+  }
+
+  .contacts__link {
+    margin-left: 0;
+  }
+
+  .contacts__item-address {
+    padding: 0;
+    padding-right: 15px;
   }
 }
