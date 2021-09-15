@@ -9,7 +9,7 @@
     left: 0;
     right: 0;
     height: 6px;
-    background-image: url("../img/zigzag.svg");
+    background-image: url("../img/svg/zigzag.desktop.svg");
     background-position: center bottom;
     background-size: auto 100%;
     background-repeat: repeat-x;
@@ -17,7 +17,7 @@
 }
 
 .about__title {
-  margin-top: 37px;
+  margin-top: 33px;
 }
 
 .about__list-item {
@@ -25,8 +25,49 @@
   height: 120px;
 }
 
-.about__list-item::before {
-  content: "";
+.about__list-item p {
+  margin: 0;
+  padding-top: 20px;
+}
+
+.about__list-item-flower {
+  position: relative;
+  left: 8px;
+  top: 7px;
+}
+
+.about__list-item-square {
+  position: relative;
+  top: 11px;
+  padding-bottom: 14px;
+}
+
+.about__list-item-heart {
+  position: relative;
+  top: 19px;
+  left: 7px;
+  padding-bottom: 17px;
+}
+
+.about__list-item-cotton {
+  position: relative;
+  top: 19px;
+  left: 3px;
+  padding-bottom: 13px;
+}
+
+.about__list-item-rocket {
+  position: relative;
+  top: 23px;
+  left: -6px;
+  padding-bottom: 26px;
+}
+
+.about__list-item-present {
+  position: relative;
+  top: 24px;
+  left: 3px;
+  padding-bottom: 21px;
 }
 
 .about__review-title {
@@ -81,7 +122,7 @@
   border: 1px solid @colorBorder;
   border-right: 1px solid @colorBorder;
   margin-bottom: 38px;
-  margin-top: 30px;
+  margin-top: 36px;
 }
 
 .about__button:hover svg {
@@ -99,7 +140,7 @@
 
 .about__button-write {
   grid-area: button;
-  margin-bottom: 45px;
+  margin-bottom: 51px;
 }
 
 @media (min-width: @tablet-width) {
@@ -111,40 +152,90 @@
     }
   }
 
+  .about__title {
+    margin-top: 55px;
+  }
+
   .about__list {
-    display: grid;
-    grid-template-columns: 335px 335px;
+    column-count: 2;
+    column-gap: 0;
+  }
+
+  .about__list-item:nth-child(n+4) img {
+    margin-top: -8px;
+  }
+
+  .about__list-item {
+    height: 152px;
+    font-size: 20px;
+    line-height: 22px;
   }
 
   .about__review {
-    background-image: url("../img/Content/lace-background.png");
+    background-image: url("../img/bg-about.tablet.jpg");
+    border-color: @colourBackgrouondImage;
     background-repeat: no-repeat;
+    background-position: left 40px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-about.tablet@2x.jpg");
+      background-size: 350px 457px;
+    }
   }
 
   .about__review-container {
-    // width: @tablet-width;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "title button"
       "text text"
       "signature arrows";
+    padding-top: 50px;
+    padding-bottom: 30px;
   }
 
   .about__button {
     border: none;
+    width: 91px;
+    margin-top: 67px;
   }
 
   .about__review-title,
   .about__review-text,
   .about__signature {
-    margin-left: 50px;
+    margin: 0;
+  }
+
+  .about__review-title {
+    padding-top: 73px;
+  }
+
+  .about__review-text {
+    font-size: 17px;
+    padding-top: 38px;
+  }
+
+  .about__review-text br {
+    display: none;
+  }
+
+  .about__signature {
+    padding-top: 28px;
+    font-size: 18px;
+    line-height: 24px;
   }
 
   .about__button-write,
   .about__button-wrapper {
-    margin-right: 50px;
+    margin-right: 0;
     margin-left: auto;
+  }
+
+  .about__button-write {
+    width: 175px;
+    margin: 0;
+    align-self: end;
+    justify-self: end;
   }
 }
 
@@ -159,17 +250,49 @@
 
   .about__list {
     margin-left: 174px;
+    width: 700px;
   }
 
   .about__review {
-    background-position-x: 50px;
+    background-image: url("../img/bg-about.desktop.jpg");
+    background-position: 50px 49px;
+    padding-bottom: 22px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/bg-about.desktop@2x.jpg");
+    }
   }
 
   .about__title {
     margin-left: 174px;
+    margin-top: 68px;
+    margin-bottom: 33px;
   }
 
   .about__button-write {
     width: 175px;
+  }
+
+  .about__review-title {
+    margin-left: 174px;
+    padding-top: 77px;
+  }
+
+  .about__review-text {
+    padding-left: 174px;
+    padding-top: 36px;
+    padding-right: 65px;
+  }
+
+  .about__signature {
+    padding-top: 11px;
+    padding-left: 174px;
+    padding-bottom: 71px;
+    font-size: 17px;
+  }
+
+  .about__button {
+    width: 90px;
+    margin-top: 47px;
   }
 }

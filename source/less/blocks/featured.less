@@ -19,7 +19,7 @@
     left: 0;
     right: 0;
     height: 6px;
-    background-image: url("../img/zigzag.svg");
+    background-image: url("../img/svg/zigzag.desktop.svg");
     background-position: center bottom;
     background-size: auto 100%;
     background-repeat: repeat-x;
@@ -58,7 +58,9 @@
   grid-area: list;
   display: grid;
   grid-template-columns: 97px 162px;
-  grid-template-rows: repeat(3, 32px);
+  grid-template-rows: repeat(3, 40px);
+  margin: 0;
+  padding-top: 13px;
   color: @colorTextLighter;
 }
 
@@ -79,8 +81,9 @@
   width: 100%;
   min-height: 315px;
   min-width: 260px;
+  max-width: 100%;
   margin: 0 auto;
-  padding-top: 24px;
+  margin-top: 21px;
   background-color: @colorFooterBackground;
   z-index: -1;
 }
@@ -100,15 +103,16 @@
 @media (min-width: @tablet-width) {
   .featured {
     grid-template-columns: 334px 334px;
-    grid-template-rows: 94px 133px 170px 57px 52px;
+    grid-template-rows: 87px 124px 154px 86px 56px;
     grid-template-areas:
       "head head"
       "description image"
       "list image"
       "price image"
       "button image";
-    padding-bottom: 52px;
+    padding-bottom: 67px;
     padding-top: 0;
+    margin-top: -29px;
 
     &::after {
       height: 17px;
@@ -128,10 +132,28 @@
     width: 100px;
     margin: 0;
     text-align: center;
+    padding-right: 12px;
+  }
+
+  .featured__description {
+    font-size: 17px;
+    line-height: 30px;
+    padding-right: 35px;
+  }
+
+
+  .featured__image {
+    width: 334px;
+    height: 404px;
+    margin: 0;
+    padding-top: 12px;
   }
 
   .featured__price {
     margin: 0;
+    font-size: 20px;
+    align-self: center;
+    padding-right: 45px;
   }
 
   .featured__button {
@@ -142,9 +164,10 @@
 
 @media (min-width: @desktop-width) {
   .featured {
-    padding-top: 49px;
-    grid-template-columns: 172px 294px 583px;
-    grid-template-rows: 102px 125px 240px 57px 52px;
+    margin-top: -15px;
+    padding-bottom: 96px;
+    grid-template-columns: 172px 353px 525px;
+    grid-template-rows: 118px 153px 225px 88px 52px;
     grid-template-areas:
       "head head image"
       ". description image"
@@ -155,25 +178,44 @@
     &::after {
       height: 23px;
       width: 1050px;
+      margin: 0 auto;
     }
   }
 
   .featured__head-wrapper {
     width: 700px;
+    align-items: flex-end;
   }
 
   .featured__item {
     order: -1;
     text-align: center;
     min-width: 100px;
+    padding-left: 31px;
+    padding-bottom: 10px;
+  }
+
+  .featured__title {
+    z-index: 5;
   }
 
   .featured__image {
     width: 525px;
     height: 636px;
+    padding: 0;
   }
 
-  .featured__button {
-    justify-self: center;
+  .featured__description {
+    margin: 0;
+    padding-top: 35px;
+    padding-right: 55px;
+  }
+
+  .featured__list {
+    padding-top: 32px;
+  }
+
+  .featured__price {
+    padding-right: 54px;
   }
 }

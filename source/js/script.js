@@ -1,6 +1,6 @@
 var button = document.querySelector('.main-nav__toggle');
 var menu = document.querySelector('.main-nav__list');
-var header = document.querySelector('.page-header')
+var header = document.querySelector('.page-header');
 
 header.classList.remove('page-header--nojs');
 
@@ -10,3 +10,8 @@ button.onclick = function() {
   button.classList.toggle('main-nav__toggle--opened')
   menu.classList.toggle('main-nav__list--hidden');
 }
+
+
+var order = document.querySelector('.featured__button'),
+  form = document.querySelector('page-modal'),
+  overlay = document.querySelector('#overlay');

@@ -4,12 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: «Мишка»</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicon/icon180.png">
@@ -18,7 +14,11 @@
     <header class="page-header page-header--nojs">
       <div class="page-header__container container">
         <a class="page-header__logo" href="#!">
-          <img class="page-header__logo-image" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин Мишка">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/svg/logo.desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/svg/logo.tablet.svg">
+            <img class="page-header__logo-image" src="img/svg/logo.mobile.svg" width="86" height="35" alt="Магазин Мишка">
+          </picture>
         </a>
         <nav class="main-nav">
           <button class="main-nav__toggle main-nav__toggle--opened" type="button">
@@ -62,8 +62,8 @@
         <div class="container">
           <h2 class="page-main__menu-title title">Милые штуки ручной<br> работы для дома</h2>
           <div class="page-main__menu-button-wrapper">
-            <button class="page-main__menu-button page-main__menu-button--one" type="button">Предметы <br>интерьера</button>
-            <button class="page-main__menu-button page-main__menu-button--two" type="button">Детские <br>игрушки</button>
+            <a class="page-main__menu-button page-main__menu-button--one" href="#!">Предметы <br>интерьера</a>
+            <a class="page-main__menu-button page-main__menu-button--two" href="#!">Детские <br>игрушки</a>
           </div>
         </div>
       </section>
@@ -83,7 +83,14 @@
           <dt class="featured__list-term">Высота:</dt>
           <dd class="featured__list-description">15 см</dd>
         </dl>
-        <img class="featured__image" src="img/triple-set-mobile-1.jpg" width="260" height="315" alt="Три разноцветные корзинки в руках">
+        <picture class="featured-image-picture">
+          <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/item-weekly.desktop.webp 1x, img/content/item-weekly.desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="img/content/item-weekly.tablet.webp 1x, img/content/item-weekly.tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/content/item-weekly.mobile.webp 1x, img/content/item-weekly.mobile@2x.webp 2x">
+          <source media="(min-width: 1150px)" srcset="img/content/item-weekly.desktop.jpg 1x, img/content/item-weekly.desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/content/item-weekly.tablet.jpg 1x, img/content/item-weekly.tablet@2x.jpg 2x">
+          <img class="featured__image" src="img/content/item-weekly.mobile.jpg" srcset="img/content/item-weekly.mobile@2x.jpg 2x" width="260" height="315" alt="Три разноцветные корзинки в руках">
+        </picture>
         <p class="featured__price">Цена: 990 руб.</p>
         <button class="featured__button button" type="button">ЗАКАЗАТЬ</button>
       </article>
@@ -92,22 +99,28 @@
           <h2 class="about__title title">Коротко о нас:</h2>
           <ul class="about__list">
             <li class="about__list-item">
-              Экологически <br>чистые материалы
+              <img class="about__list-item-flower" src="img/svg/icon-flower.svg" width="33" height="38" alt="">
+              <p>Экологически <br>чистые материалы</p>
             </li>
             <li class="about__list-item">
-              Скандинавский стиль <br>по российской цене
+              <img class="about__list-item-square" src="img/svg/icon-square.svg" width="47" height="27" alt="">
+              <p>Скандинавский стиль <br>по российской цене</p>
             </li>
             <li class="about__list-item">
-              Увеличивает лайки <br>на фотографиях
+              <img class="about__list-item-heart" src="img/svg/icon-heart.svg" width="34" height="27" alt="">
+              <p>Увеличивает лайки <br>на фотографиях</p>
             </li>
             <li class="about__list-item">
-              Связано вручную <br>с любовью и умилением
+              <img class="about__list-item-cotton" src="img/svg/icon-cotton.svg" width="35" height="34" alt="">
+              <p>Связано вручную <br>с любовью и умилением</p>
             </li>
             <li class="about__list-item">
-              Поддержка отечественного <br>производителя
+              <img class="about__list-item-rocket" src="img/svg/icon-rocket.svg" width="55" height="23" alt="">
+              <p>Поддержка отечественного <br>производителя</p>
             </li>
             <li class="about__list-item">
-              Поставляется <br>в подарочной упаковке
+              <img class="about__list-item-present" src="img/svg/icon-present.svg" width="33" height="32" alt="">
+              <p>Поставляется <br>в подарочной упаковке</p>
             </li>
           </ul>
         </div>
@@ -141,11 +154,11 @@
       </section>
       <section class="contacts">
           <h2 class="contacts__title title">Контакты</h2>
-          <div class="contacts__container">
+          <div class="contacts__container container">
             <div class="contacts__item">e-mail:</div>
             <div class="contacts__item"><a class="contacts__link contacts__link--underline" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a></div>
             <div class="contacts__item">адрес:</div>
-            <div class="contacts__item">г. Санкт-Петербургул. Большая Конюшеннаяд. 19/8, офис 101</div>
+            <div class="contacts__item contacts__item-address">г. Санкт-Петербург <br>ул. Большая Конюшенная д. 19/8, офис 101</div>
           </div>
           <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.582247591493!2d30.323870836820703!3d59.939073874430115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sfr!4v1629490861526!5m2!1sru!2sfr" width="320" height="455" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
           <button class="button contacts__button" type="button">Напишите нам</button>
@@ -201,7 +214,7 @@
         </a>
       </div>
   </footer>
-    <form class="page-modal">
+    <form class="page-modal page-modal--hide">
       <div class="page-modal__wrapper">
         <h2 class="page-modal__title">Добавить в корзину</h2>
         <p class="page-modal__description">Выберите размер:</p>
@@ -222,6 +235,7 @@
         <input class="page-modal__button" type="submit" value="Добавить">
       </div>
     </form>
-    <script src="js/script.js"></script>
+    <div class="page-modal__overlay" id="overlay"></div>
+    <script src="js/script.min.js"></script>
   </body>
 </html>
