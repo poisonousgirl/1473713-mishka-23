@@ -19,7 +19,7 @@
     left: 0;
     right: 0;
     height: 6px;
-    background-image: url("../img/svg/zigzag.svg");
+    background-image: url("../img/svg/zigzag.desktop.svg");
     background-position: center bottom;
     background-size: auto 100%;
     background-repeat: repeat-x;
@@ -112,6 +112,7 @@
       "button image";
     padding-bottom: 67px;
     padding-top: 0;
+    margin-top: -29px;
 
     &::after {
       height: 17px;
@@ -163,7 +164,8 @@
 
 @media (min-width: @desktop-width) {
   .featured {
-    padding-top: 52px;
+    margin-top: -15px;
+    padding-bottom: 96px;
     grid-template-columns: 172px 353px 525px;
     grid-template-rows: 118px 153px 225px 88px 52px;
     grid-template-areas:
@@ -176,6 +178,7 @@
     &::after {
       height: 23px;
       width: 1050px;
+      margin: 0 auto;
     }
   }
 
