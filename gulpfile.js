@@ -105,6 +105,8 @@ const copy = (done) => {
     "source/manifest.webmanifest",
     "source/favicon.ico",
     "source/*.ico",
+    "source/img/svg/*.svg",
+    "source/img/content/*{jpg,webp}",
     "source/img//*.svg",
     "!source/img/icons/*.svg",
   ], {
