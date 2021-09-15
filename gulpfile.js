@@ -56,7 +56,7 @@ exports.scripts = scripts;
 // Images
 
 const optimizeImages = () => {
-  return gulp.src("source/img//*.{png,jpg,svg}")
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(imagemin([
       imagemin.mozjpeg({progressive: true}),
       imagemin.optipng({optimizationLevel: 3}),
@@ -68,7 +68,7 @@ const optimizeImages = () => {
 exports.images = optimizeImages;
 
 const copyImages = () => {
-  return gulp.src("source/img//*.{png,jpg,svg}")
+  return gulp.src("source/img/**/*.{png,jpg,svg}")
     .pipe(gulp.dest("build/img"))
 }
 
@@ -77,7 +77,7 @@ exports.images = copyImages;
 // WebP
 
 const createWebp = () => {
-  return gulp.src("source/img//*.{jpg,png}")
+  return gulp.src("source/img/**/*.{jpg,png}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("build/img"))
 }
@@ -102,12 +102,10 @@ exports.sprite = sprite;
 const copy = (done) => {
   gulp.src([
     "source/fonts/*.{woff2,woff}",
-    "source/manifest.webmanifest",
-    "source/favicon.ico",
     "source/*.ico",
-    "source/img/svg/*.svg",
-    "source/img/content/*{jpg,webp}",
-    "source/img//*.svg",
+    "source/img/**/*.svg",
+    "source/favicon.ico",
+    "source/manifest.webmanifest",
     "!source/img/icons/*.svg",
   ], {
     base: "source"
