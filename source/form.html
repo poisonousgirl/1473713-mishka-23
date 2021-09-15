@@ -18,7 +18,11 @@
     <header class="page-header page-header--nojs">
       <div class="page-header__container container">
         <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-image" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин Мишка">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/svg/logo.desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/svg/logo.tablet.svg">
+            <img class="page-header__logo-image" src="img/svg/logo.mobile.svg" width="86" height="35" alt="Магазин Мишка">
+          </picture>
         </a>
         <nav class="main-nav">
           <button class="main-nav__toggle main-nav__toggle--opened" type="button">

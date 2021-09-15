@@ -18,7 +18,11 @@
     <header class="page-header page-header--nojs">
       <div class="page-header__container container">
         <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-image" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин Мишка">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/svg/logo.desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/svg/logo.tablet.svg">
+            <img class="page-header__logo-image" src="img/svg/logo.mobile.svg" width="86" height="35" alt="Магазин Мишка">
+          </picture>
         </a>
         <nav class="main-nav">
           <button class="main-nav__toggle main-nav__toggle--opened" type="button">
@@ -67,6 +71,9 @@
         <article class="page-catalog__product">
           <a class="page-catalog__product-link">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/item-bunny.desktop.webp 1x, img/content/item-bunny.desktop@2x 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/item-bunny.tablet.webp 1x, img/content/item-bunny.tablet@2x 2x">
+              <source type="image/webp" srcset="img/content/item-bunny.mobile.webp 1x, img/content/item-bunny.mobile@2x 2x">
               <source media="(min-width: 1150px)" srcset="img/content/item-bunny.desktop.jpg 1x, img/content/item-bunny.desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/content/item-bunny.tablet.jpg 1x, img/content/item-bunny.tablet@2x.jpg 2x">
               <img class="page-catalog__product-image" src="img/content/item-bunny.mobile.jpg" srcset="img/content/item-bunny.mobile@2x 2x" width="260" height="195" alt="Вязаный бирюзовый заяц">
@@ -86,6 +93,9 @@
         <article class="page-catalog__product">
           <a class="page-catalog__product-link">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/item-small-basket.desktop.webp 1x, img/content/item-small-basket.desktop@2x 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/item-small-basket.tablet.webp 1x, img/content/item-small-basket.tablet@2x 2x">
+              <source type="image/webp" srcset="img/content/item-small-basket.mobile.webp 1x, img/content/item-small-basket.mobile@2x 2x">
               <source media="(min-width: 1150px)" srcset="img/content/item-small-basket.desktop.jpg 1x, img/content/item-small-basket.desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/content/item-small-basket.tablet.jpg 1x, img/content/item-small-basket.tablet@2x.jpg 2x">
               <img class="page-catalog__product-image" src="img/content/item-small-basket.mobile.jpg" srcset="img/content/item-small-basket.mobile@2x.jpg 2x" width="260" height="195" alt="Вязаная корзинка с полотенцами">
@@ -105,6 +115,9 @@
         <article class="page-catalog__product">
           <a class="page-catalog__product-link">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/item-big-basket.desktop.webp 1x, img/content/item-big-basket.desktop@2x 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/item-big-basket.tablet.webp 1x, img/content/item-big-basket.tablet@2x 2x">
+              <source type="image/webp" srcset="img/content/item-big-basket.mobile.webp 1x, img/content/item-big-basket.mobile@2x 2x">
               <source media="(min-width: 1150px)" srcset="img/content/item-big-basket.desktop.jpg 1x, img/content/item-big-basket.desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/content/item-big-basket.tablet.jpg 1x, img/content/item-big-basket.tablet@2x.jpg 2x">
               <img class="page-catalog__product-image" src="img/content/item-big-basket.mobile.jpg" srcset="img/content/item-big-basket.mobile@2x.jpg 2x" width="260" height="195" alt="Вязаная корзинка с игрушками">
@@ -127,6 +140,9 @@
           <h2 class="page-catalog__videobox-title">Процесс производства</h2>
           <div class="page-catalog__videobox-video-container">
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/content/video-image.desktop.webp 1x, img/content/video-image.desktop@2x 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/content/video-image.tablet.webp 1x, img/content/video-image.tablet@2x 2x">
+              <source type="image/webp" srcset="img/content/video-image.mobile.webp 1x, img/content/video-image.mobile@2x 2x">
               <source media="(min-width:1150px)" srcset="img/content/video-image.desktop.jpg 1x, img/content/video-image.desktop@2x.jpg 2x">
               <source  media="(min-width:768px)" srcset="img/content/video-image.tablet.jpg 1x, img/content/video-image.tablet@2x.jpg 2x">
               <img class="page-catalog__videobox-image" src="img/content/video-image.mobile.jpg" srcset="img/content/video-image.mobile@2x.jpg 2x" width="260" height="150" alt="Вязаная бирюзовая корзинка">
@@ -196,7 +212,7 @@
         </a>
       </div>
     </footer>
-    <form class="page-modal">
+    <form class="page-modal page-modal--hide">
       <div class="page-modal__wrapper">
         <h2 class="page-modal__title">Добавить в корзину</h2>
         <p class="page-modal__description">Выберите размер:</p>
