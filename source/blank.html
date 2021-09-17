@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: «Мишка»</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/script.min.js" as="script">
+    <link rel="preload" href="fonts/opensans.woff2" as="font">
+    <link rel="preload" href="fonts/opensans.woff" as="font">
     <link rel="manifest" href="manifest.webmanifest">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="favicon/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="favicon/icon180.png">
@@ -18,7 +18,11 @@
     <header class="page-header page-header--nojs">
       <div class="page-header__container container">
         <a class="page-header__logo" href="index.html">
-          <img class="page-header__logo-image" src="img/mishka-logo-mobile.svg" width="86" height="35" alt="Магазин Мишка">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/svg/logo.desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/svg/logo.tablet.svg">
+            <img class="page-header__logo-image" src="img/svg/logo.mobile.svg" width="86" height="35" alt="Магазин Мишка">
+          </picture>
         </a>
         <nav class="main-nav">
           <button class="main-nav__toggle main-nav__toggle--opened" type="button">
@@ -108,6 +112,6 @@
         </a>
       </div>
   </footer>
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 </html>

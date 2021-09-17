@@ -41,10 +41,13 @@
   align-self: center;
   justify-self: center;
   padding-left: 23%;
+  z-index: 10;
 }
 
 .page-header--nojs .page-header__logo {
-  padding-left: 40%;
+  padding-left: 35%;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .page-header__logo:hover .page-header__logo-image {
@@ -68,12 +71,20 @@
     }
   }
 
+  .page-header--nojs .page-header__container {
+    display: grid;
+  }
+
   .page-header__logo {
     grid-area: header;
     align-self: start;
     justify-self: start;
     padding-left: 0;
     padding-top: 22px;
+  }
+
+  .page-header--nojs .page-header__logo {
+    padding-left: 0;
   }
 
   .page-header__logo-image {

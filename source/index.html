@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: «Мишка»</title>
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/script.min.js" as="script">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin>
+    <link rel="preload" href="fonts/opensans.woff" as="font" crossorigin>
     <link rel="manifest" href="manifest.webmanifest">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico">
@@ -69,7 +73,7 @@
       </section>
       <article class="featured container">
         <div class="featured__head-wrapper">
-          <h2 class="featured__title title"><nobr>Вязаные корзинки</nobr></h2>
+          <h2 class="featured__title title">Вязаные корзинки</h2>
           <p class="featured__item">Товар недели</p>
         </div>
         <p class="featured__description">
@@ -137,12 +141,12 @@
               <cite class="about__signature-link">@misssssiskras</cite>
             </div>
             <div class="about__button-wrapper">
-              <button class="about__button" type="button">
+              <button class="about__button" type="button" aria-label="пролистать влево">
                 <svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M50 11H7.7L15.8 2.8L13 0L0 13L13 26L15.8 23.2L7.7 15H50V11Z" fill="black"/>
                 </svg>
               </button>
-              <button class="about__button about__button--right" type="button">
+              <button class="about__button about__button--right" type="button" aria-label="пролистать вправо">
                 <svg width="50" height="26" viewBox="0 0 50 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 11H42.3L34.2 2.8L37 0L50 13L37 26L34.2 23.2L42.3 15H0V11Z" fill="black"/>
                 </svg>
@@ -160,8 +164,8 @@
             <div class="contacts__item">адрес:</div>
             <div class="contacts__item contacts__item-address">г. Санкт-Петербург <br>ул. Большая Конюшенная д. 19/8, офис 101</div>
           </div>
-          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.582247591493!2d30.323870836820703!3d59.939073874430115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sfr!4v1629490861526!5m2!1sru!2sfr" width="320" height="455" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
-          <button class="button contacts__button" type="button">Напишите нам</button>
+          <iframe class="contacts__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.582247591493!2d30.323870836820703!3d59.939073874430115!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sfr!4v1629490861526!5m2!1sru!2sfr" width="320" height="455" style="border: 0;" allowfullscreen="" loading="lazy" aria-label="карта проезда"></iframe>
+          <a class="button contacts__button" href="blank.html" alt="">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
@@ -235,7 +239,7 @@
         <input class="page-modal__button" type="submit" value="Добавить">
       </div>
     </form>
-    <div class="page-modal__overlay" id="overlay"></div>
+    <div class="page-modal-overlay" id="overlay"></div>
     <script src="js/script.min.js"></script>
   </body>
 </html>
