@@ -73,14 +73,14 @@
 }
 
 .page-form__form-input-radio:hover + label::before,
-.page-form__form-input-checkbox:hover + label::before {
+.page-form__form-input-radio:focus + label::before,
+.page-form__form-input-checkbox:hover + label::before,
+.page-form__form-input-checkbox:focus + label::before {
   border-color: @colorUnderline;
 }
 
 .page-form__form-input-radio:active + label::before,
-.page-form__form-input-radio:focus + label::before,
-.page-form__form-input-checkbox:active + label::before,
-.page-form__form-input-checkbox:focus + label::before {
+.page-form__form-input-checkbox:active + label::before {
   border-color: rgba(@colorTextLighter, 0.3);
 }
 
@@ -130,7 +130,7 @@
   top: -3px;
   width: 23px;
   height: 16px;
-  background-image: url("../img/tick.svg");
+  background-image: url("../img/svg/tick.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   background-size: 100%;
@@ -201,6 +201,8 @@
 
 .page-form__form-field-extra textarea {
   box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
   width: 260px;
   height: 145px;
   margin-top: 22px;

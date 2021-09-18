@@ -1,7 +1,7 @@
 .page-modal {
   display: block;
   width: @mobile-width;
-  height: 336px;
+  min-height: 336px;
   position: fixed;
   margin: 0;
   top: 50%;
@@ -44,8 +44,15 @@
 .page-modal__radio {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin-top: 20px;
+}
+
+.page-modal__radio-item {
+  margin-top: 7px;
+}
+
+.page-modal__radio-item:not(:nth-child(3n)) {
+  margin-right: 7px;
 }
 
 .page-modal__radio-label {
