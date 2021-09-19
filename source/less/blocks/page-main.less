@@ -32,7 +32,7 @@
   justify-content: space-between;
   align-items: center;
   background-color: @colorAccent;
-  height: 103px;
+  min-height: 103px;
   margin-left: -30px;
   margin-right: -30px;
   padding: 0 30px;
@@ -65,6 +65,7 @@
 .page-main__menu-button--one::after {
   content: "";
   display: block;
+  flex-shrink: 0;
   width: 40px;
   height: 62px;
   background-image: url("../img/svg/lamp.svg");
@@ -131,7 +132,7 @@
 
   .page-main__menu-button {
     width: 274px;
-    height: 119px;
+    min-height: 119px;
     font-size: 20px;
     line-height: 30px;
   }

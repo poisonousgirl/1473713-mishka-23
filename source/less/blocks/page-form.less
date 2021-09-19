@@ -107,6 +107,7 @@
 .page-form__form-checkbox-wrapper {
   position: relative;
   min-height: 61px;
+  padding-right: 10px;
 }
 
 .page-form__label-checkbox {
@@ -154,6 +155,7 @@
 }
 
 .page-form__form-field-phone {
+  position: relative;
   margin-top: 13px;
 }
 
@@ -177,12 +179,39 @@
   font-weight: 400;
 }
 
+.page-form__label-phone {
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 3px;
+    right: 4px;
+    width: 25px;
+    height: 24px;
+    fill: @colorText;
+    opacity: 0.2;
+  }
+}
+
+.page-form__input-email {
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 10px;
+    right: 3px;
+    width: 32px;
+    height: 21px;
+    fill: @colorText;
+    opacity: 0.2;
+  }
+}
+
 .page-form__form-field-name input,
 .page-form__input-phone,
 .page-form__input-email {
   font-size: 19px;
   line-height: 18px;
-  letter-spacing: 1px;
   border: none;
   border-bottom: 2px solid @colorText;
   width: 260px;
@@ -196,17 +225,29 @@
     outline: none;
     border-color: transparent;
     border-bottom: 2px solid @colorUnderline;
+
+    svg {
+      fill: @colorUnderline;
+      opacity: 1;
+    }
   }
 }
+
+// .page-form__input-phone + label:hover svg,
+// .page-form__input-phone + label:active svg,
+// .page-form__input-phone + label:focus svg {
+//   fill: @colorUnderline;
+// }
 
 .page-form__form-field-extra textarea {
   box-sizing: border-box;
   font-family: inherit;
   font-size: inherit;
+  line-height: 18px;
   width: 260px;
-  height: 145px;
-  margin-top: 22px;
-  padding: 19px 16px;
+  height: 142px;
+  margin-top: 26px;
+  padding: 15px 16px;
   border: 2px solid @colorText;
 
   &:hover,
@@ -228,6 +269,7 @@
 .page-form__button {
   margin-bottom: 55px;
   margin-top: 15px;
+  font-size: 17px;
 }
 
 @media (min-width: @tablet-width) {
@@ -313,7 +355,7 @@
   .page-form__checkbox-grid-container {
     grid-template-columns: 169px 1fr;
     padding-top: 71px;
-    padding-bottom: 9px;
+    padding-bottom: 35px;
   }
 
   .page-form__label-checkbox {
@@ -339,12 +381,14 @@
   .page-form__form-field-checkbox-list {
     display: grid;
     grid-template-columns: 262px 1fr;
-    grid-template-rows: repeat(3, 77px);
+    grid-template-rows: repeat(3, min-content);
+    row-gap: 20px;
   }
 
   .page-form__form-checkbox-wrapper {
     display: flex;
     flex-direction: column;
+    min-height: 55px;
   }
 
   .page-form__form-field-name input,
@@ -397,7 +441,7 @@
 
   .page-form__form-field-background-wrapper {
     background-color: @colorFooterBackground;
-    padding-bottom: 52px;
+    padding-bottom: 48px;
   }
 
   .page-form__input-phone,
@@ -435,7 +479,7 @@
   .page-form__form-field-extra {
     display: flex;
     justify-content: space-between;
-    margin-top: 49px;
+    margin-top: 50px;
   }
 
   .page-form__form-field-extra h3 {
@@ -501,12 +545,12 @@
 
   .page-form__checkbox-grid-container {
     grid-template-columns: 116px 1fr;
-    padding: 67px 111px 10px;
+    padding: 67px 111px 30px;
   }
 
   .page-form__form-field-checkbox-list {
     grid-template-columns: 262px 264px auto;
-    grid-template-rows: repeat(2, 75px);
+    grid-template-rows: repeat(2, min-content);
   }
 
   .page-form__label-checkbox::before {
@@ -535,7 +579,7 @@
   }
 
   .page-form__form-field-phone {
-    padding-top: 67px;
+    padding-top: 48px;
   }
 
   .page-form__form-field-email {
@@ -545,7 +589,7 @@
   .page-form__input-phone {
     width: 697px;
     margin-left: 82px;
-    padding-bottom: 22px;
+    padding: 17px 18px 20px;
   }
 
   .page-form__input-email {
