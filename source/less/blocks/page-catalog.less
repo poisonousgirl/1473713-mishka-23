@@ -139,6 +139,7 @@
 }
 
 .page-catalog__videobox-image {
+  display: block;
   min-width: 260px;
   width: 100%;
 }
@@ -376,6 +377,7 @@
   .page-catalog__videobox-container {
     grid-area: container;
     padding-left: 78px;
+    padding-bottom: 60px;
   }
 
   .page-catalog__videobox {
@@ -383,7 +385,7 @@
       "video title"
       "video container";
     grid-template-columns: 682px 367px;
-    grid-template-rows: 171px 284px;
+    grid-template-rows: min-content auto;
     margin-top: 0;
     padding-bottom: 0;
     margin-bottom: 102px;

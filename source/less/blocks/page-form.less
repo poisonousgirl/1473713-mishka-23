@@ -164,7 +164,7 @@
 }
 
 .page-form__form-field-extra {
-  margin-top: 36px;
+  margin-top: 34px;
 }
 
 [class^="page-form__form-field"] {
@@ -184,8 +184,8 @@
 
   svg {
     position: absolute;
-    top: 3px;
-    right: 4px;
+    top: -1px;
+    right: 6px;
     width: 25px;
     height: 24px;
     fill: @colorText;
@@ -193,12 +193,12 @@
   }
 }
 
-.page-form__input-email {
+.page-form__label-email {
   position: relative;
 
   svg {
     position: absolute;
-    top: 10px;
+    top: 5px;
     right: 3px;
     width: 32px;
     height: 21px;
@@ -226,18 +226,22 @@
     border-color: transparent;
     border-bottom: 2px solid @colorUnderline;
 
-    svg {
+    & + svg {
       fill: @colorUnderline;
       opacity: 1;
     }
   }
 }
 
-// .page-form__input-phone + label:hover svg,
-// .page-form__input-phone + label:active svg,
-// .page-form__input-phone + label:focus svg {
-//   fill: @colorUnderline;
-// }
+.page-form__input-email,
+.page-form__input-phone {
+  height: 52px;
+  margin-top: 3px;
+}
+
+.page-form__input-phone::placeholder {
+  letter-spacing: -1px;
+}
 
 .page-form__form-field-extra textarea {
   box-sizing: border-box;
@@ -246,7 +250,7 @@
   line-height: 18px;
   width: 260px;
   height: 142px;
-  margin-top: 26px;
+  margin-top: 22px;
   padding: 15px 16px;
   border: 2px solid @colorText;
 
@@ -398,6 +402,15 @@
     padding-bottom: 19px;
   }
 
+  .page-form input::placeholder {
+    font-size: 19px;
+    padding: 0;
+  }
+
+  .page-form__form-field-name input::placeholder {
+    letter-spacing: 0.02em;
+  }
+
 
   .page-form__form-field-legend-name {
     grid-column: ~"1/-2";
@@ -428,15 +441,7 @@
     width: 375px;
     margin-left: 25px;
     flex-grow: 1;
-    padding: 19px 16px;
-  }
-
-  .page-form__input-name {
-    width: 428px;
-  }
-
-  .page-form input::placeholder {
-    padding: 0;
+    padding: 19px 16px 12px;
   }
 
   .page-form__form-field-background-wrapper {
@@ -469,11 +474,21 @@
   }
 
   .page-form__form-field-phone {
-    padding-top: 49px;
+    padding-top: 46px;
   }
 
   .page-form__form-field-email {
-    padding-top: 27px;
+    padding-top: 23px;
+  }
+
+  .page-form__label-phone svg {
+    top: 15px;
+    right: 26px;
+  }
+
+  .page-form__label-email svg {
+    top: 18px;
+    right: 22px;
   }
 
   .page-form__form-field-extra {
@@ -582,8 +597,18 @@
     padding-top: 48px;
   }
 
+  .page-form__label-phone svg {
+    top: 13px;
+    right: 5px;
+  }
+
   .page-form__form-field-email {
-    padding-top: 28px;
+    padding-top: 21px;
+  }
+
+  .page-form__label-email svg {
+    top: 18px;
+    right: 0;
   }
 
   .page-form__input-phone {
@@ -595,7 +620,7 @@
   .page-form__input-email {
     width: 696px;
     margin-left: 56px;
-    padding-bottom: 6px;
+    padding: 14px 19px 16px;
   }
 
   .page-form__form-field-extra {
